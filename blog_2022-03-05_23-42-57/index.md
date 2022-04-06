@@ -70,17 +70,6 @@ git push -u origin main
 4. 配置ssh-key，`xxx.github.io`仓库->settings -> Deploy keys -> ACTIONS_DEPLOY_KEY -> Public Key -> Allow write access，`blog`仓库 -> settings -> Secrets -> ACTIONS_DEPLOY_KEY -> Private Key。
 
 ```bash
-$ ssh-keygen -t rsa -C "xxx@xxx.com" -f ~\.ssh\id_rsa_hugo_deploy 
+$ ssh-keygen -t rsa -C "xxx@xxx.com" -f ~\.ssh\id_rsa_hugo_deploy
 ```
-
-
-
-
-
-
-
-
-
-
-
 
