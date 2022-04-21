@@ -1,11 +1,11 @@
-# Hugo搭建博客
+# 静态博客Hugo
 
 
 摘要：从Hugo安装、Hugo主题、Hugo博客和Hugo部署四个方面展开，简述Hugo搭建博客的整个流程。
 
 <!--more-->
 
-# Hugo搭建博客
+# 静态博客Hugo
 
 ## Hugo 安装
 
@@ -40,7 +40,7 @@ $ cd blog
 # 创建文章
 $ hugo new posts/first_post.md
 # 临时
-$ hugo server -D 
+$ hugo server -D # 访问 http://localhost:1313/ 
 # 构建网站
 $ hugo
 ```
@@ -48,8 +48,6 @@ $ hugo
 ## Hugo 部署
 
 参考链接：[link](https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action)。
-
-
 
 Github部署 + Hugo页面：
 
