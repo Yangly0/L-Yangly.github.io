@@ -27,10 +27,10 @@ $ cmder.exe /REGISTER ALL
 右击cmd窗口，点击setting。在Start-up下的environment中加入: set LANG=zh_CN.UTF8，解决乱码。
 
 <div align=center>
-    <img src=https://cloud-resources-data.oss-cn-chengdu.aliyuncs.com/imgs/20211220142811.png width=75% />
+    <img src=https://cloud-resources-data.oss-cn-chengdu.aliyuncs.com/blog/20211220142811.png width=75% />
 </div>
-
 ### 3、λ改为$
+
 修改文件： `D:\cmder\vendor\clink.lua`，如下
 
 ```lua
