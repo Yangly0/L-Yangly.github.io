@@ -1,0 +1,952 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title class=pjax-title>编辑器 Visual Studio Code - Yang</title><meta name=Description content><meta property="og:title" content="编辑器 Visual Studio Code"><meta property="og:description" content="摘要：Visual Studio Code（简称“VS Code”）是Microsoft在2015年4月30日Build开发者大会上正式宣布一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代Web和云应用的跨平台源代码编辑器，可在桌面上运行，并且可用于Windows，macOS和Linux。它具有对JavaScript，TypeScript和Node.js的内置支持，并具有丰富的其他语言（例如C++，C＃，Java，Python，PHP，Go）和运行时（例如.NET和Unity）扩展的生态系统。"><meta property="og:type" content="article"><meta property="og:url" content="https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x24%E7%BC%96%E8%BE%91%E5%99%A8vs-code/"><meta property="og:image" content="https://Yangliuly1.github.io/images/avatar.webp"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-01-01T08:00:00+08:00"><meta property="article:modified_time" content="2020-01-01T08:00:00+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://Yangliuly1.github.io/images/avatar.webp"><meta name=twitter:title content="编辑器 Visual Studio Code"><meta name=twitter:description content="摘要：Visual Studio Code（简称“VS Code”）是Microsoft在2015年4月30日Build开发者大会上正式宣布一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代Web和云应用的跨平台源代码编辑器，可在桌面上运行，并且可用于Windows，macOS和Linux。它具有对JavaScript，TypeScript和Node.js的内置支持，并具有丰富的其他语言（例如C++，C＃，Java，Python，PHP，Go）和运行时（例如.NET和Unity）扩展的生态系统。"><meta name=application-name content="Yang"><meta name=apple-mobile-web-app-title content="Yang"><meta name=theme-color content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x24%E7%BC%96%E8%BE%91%E5%99%A8vs-code/><link rel=prev href=https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x07%E7%BD%91%E7%BB%9C%E6%B5%8F%E8%A7%88%E5%99%A8chrome/><link rel=next href=https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x03%E7%A1%AC%E7%9B%98hdd/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/lib/fontawesome-free/all.min.css><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/lib/animate/animate.min.css><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"编辑器 Visual Studio Code","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/Yangliuly1.github.io\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x24%E7%BC%96%E8%BE%91%E5%99%A8vs-code\/"},"genre":"posts","keywords":"软件","wordcount":1766,"url":"https:\/\/Yangliuly1.github.io\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x24%E7%BC%96%E8%BE%91%E5%99%A8vs-code\/","datePublished":"2020-01-01T08:00:00+08:00","dateModified":"2020-01-01T08:00:00+08:00","publisher":{"@type":"Organization","name":"Yangliuly1"},"author":{"@type":"Person","name":"Yangliuly1"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>function setTheme(e){document.body.setAttribute("theme",e),document.documentElement.style.setProperty("color-scheme",e==="light"?"light":"dark")}function saveTheme(e){window.localStorage&&localStorage.setItem("theme",e)}function getMeta(t){const e=document.getElementsByTagName("meta");for(let n=0;n<e.length;n++)if(e[n].getAttribute("name")===t)return e[n];return''}if(window.localStorage&&localStorage.getItem("theme")){let e=localStorage.getItem("theme");e==="light"||e==="dark"||e==="black"?setTheme(e):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?setTheme("dark"):setTheme("light")}else"auto"==="light"||"auto"==="dark"||"auto"==="black"?(setTheme("auto"),saveTheme("auto")):(saveTheme("auto"),window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?setTheme("dark"):setTheme("light"));let metaColors={light:"#f8f8f8",dark:"#252627",black:"#000000"};getMeta("theme-color").content=metaColors[document.body.getAttribute("theme")]</script><div id=back-to-top></div><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=Yang><span class=header-title-pre><i class="far fa-edit fa-fw"></i></span><span id=desktop-header-typeit class=typeit></span></a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=https://github.com/Yangliuly1 title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a><span class="menu-item delimiter"></span><a href=# onclick=return!1 class="menu-item theme-select" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+<select class=color-theme-select id=theme-select-desktop title="Switch Theme"><option value=light>Light</option><option value=dark>Dark</option><option value=black>Black</option><option value=auto>Auto</option></select></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=Yang><span class=header-title-pre><i class="far fa-edit fa-fw"></i></span><span id=mobile-header-typeit class=typeit></span></a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=https://github.com/Yangliuly1 title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a><a href=# onclick=return!1 class="menu-item theme-select" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+<select class=color-theme-select id=theme-select-mobile title="Switch Theme"><option value=light>Light</option><option value=dark>Dark</option><option value=black>Black</option><option value=auto>Auto</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class="toc-content always-active" id=toc-content-auto><nav id=TableOfContents><ul><li><a href=#安装>安装</a></li><li><a href=#配置文件settingjson>配置文件setting.json</a></li><li><a href=#编译置>编译置</a><ul><li><a href=#1tasksjson>1、tasks.json</a></li><li><a href=#2c_cpp_propertiesjson>2、c_cpp_properties.json</a></li></ul></li><li><a href=#调试>调试</a><ul><li><a href=#1调试配置launchjson>1、调试配置launch.json</a></li><li><a href=#2调试命令>2、调试命令</a></li><li><a href=#3debug-console>3、Debug console</a></li></ul></li><li><a href=#用户脚本-user-snippet>用户脚本 User Snippet</a></li><li><a href=#插件>插件</a><ul><li><a href=#1git>1、Git</a></li><li><a href=#2local-history>2、Local History</a></li><li><a href=#3git-history>3、git history</a></li><li><a href=#4python>4、python</a></li><li><a href=#5cc>5、c/c++</a></li><li><a href=#6todo-highlight-和-todo-tree>6、TODO highlight 和 Todo Tree</a></li><li><a href=#7vscode-icons>7、vscode-icons</a></li><li><a href=#8coder-runner>8、Coder Runner</a></li><li><a href=#9markdown-plugh>9、Markdown plugh</a></li><li><a href=#10picgo>10、picgo</a></li><li><a href=#11java-extension-pack>11、Java Extension Pack</a></li><li><a href=#12settings-sync>12、Settings Sync</a></li><li><a href=#13remote-wsl>13、Remote-WSL</a></li><li><a href=#14remote-ssh>14、Remote-SSH</a></li><li><a href=#15docker>15、docker</a></li><li><a href=#16jupyter>16、Jupyter</a></li></ul></li><li><a href=#字体>字体</a></li><li><a href=#参考>参考</a></li></ul></nav></div></div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle","normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC","true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">编辑器 Visual Studio Code</h1><div class=post-meta><div class=post-meta-line><span class=post-author><i class="author fas fa-user-circle fa-fw"></i><a href=/about/ title=Author rel=author class=author>Yangliuly1</a>
+</span>&nbsp;<span class=post-category>included in </span>&nbsp;<span class=post-category>category <a href=/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/><i class="far fa-folder fa-fw"></i>计算机基础</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2020-01-01>2020-01-01</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime=2020-01-01>2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1766 words&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#安装>安装</a></li><li><a href=#配置文件settingjson>配置文件setting.json</a></li><li><a href=#编译置>编译置</a><ul><li><a href=#1tasksjson>1、tasks.json</a></li><li><a href=#2c_cpp_propertiesjson>2、c_cpp_properties.json</a></li></ul></li><li><a href=#调试>调试</a><ul><li><a href=#1调试配置launchjson>1、调试配置launch.json</a></li><li><a href=#2调试命令>2、调试命令</a></li><li><a href=#3debug-console>3、Debug console</a></li></ul></li><li><a href=#用户脚本-user-snippet>用户脚本 User Snippet</a></li><li><a href=#插件>插件</a><ul><li><a href=#1git>1、Git</a></li><li><a href=#2local-history>2、Local History</a></li><li><a href=#3git-history>3、git history</a></li><li><a href=#4python>4、python</a></li><li><a href=#5cc>5、c/c++</a></li><li><a href=#6todo-highlight-和-todo-tree>6、TODO highlight 和 Todo Tree</a></li><li><a href=#7vscode-icons>7、vscode-icons</a></li><li><a href=#8coder-runner>8、Coder Runner</a></li><li><a href=#9markdown-plugh>9、Markdown plugh</a></li><li><a href=#10picgo>10、picgo</a></li><li><a href=#11java-extension-pack>11、Java Extension Pack</a></li><li><a href=#12settings-sync>12、Settings Sync</a></li><li><a href=#13remote-wsl>13、Remote-WSL</a></li><li><a href=#14remote-ssh>14、Remote-SSH</a></li><li><a href=#15docker>15、docker</a></li><li><a href=#16jupyter>16、Jupyter</a></li></ul></li><li><a href=#字体>字体</a></li><li><a href=#参考>参考</a></li></ul></nav></div></div><div class=content id=content><p>摘要：Visual Studio Code（简称“VS Code”）是Microsoft在2015年4月30日Build开发者大会上正式宣布一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代Web和云应用的跨平台源代码编辑器，可在桌面上运行，并且可用于Windows，macOS和Linux。它具有对JavaScript，TypeScript和Node.js的内置支持，并具有丰富的其他语言（例如C++，C＃，Java，Python，PHP，Go）和运行时（例如.NET和Unity）扩展的生态系统。</p><h1 id=编辑器-visual-studio-code class=headerLink><a href=#%e7%bc%96%e8%be%91%e5%99%a8-visual-studio-code class=header-mark></a>编辑器 Visual Studio Code</h1><h2 id=安装 class=headerLink><a href=#%e5%ae%89%e8%a3%85 class=header-mark></a>安装</h2><h2 id=配置文件settingjson class=headerLink><a href=#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6settingjson class=header-mark></a>配置文件setting.json</h2><p><strong>注意：语言环境，需提前安装，如Miniconda, MinGW64等。</strong></p><ul><li>设置默认的语言环境, 字体，插件配置等。</li><li>File->Preferences->Settings->settings.json。</li><li>shift+ctrl+p->settings.json。</li><li><strong>python环境：python(Extension)可以切换python环境，实质是创建在.vscode下创建一个settings.json文件保存路径。</strong></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// python
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;python.pythonPath&#34;</span><span class=p>:</span> <span class=s2>&#34;D:/Miniconda3/python.exe&#34;</span><span class=p>,</span>    <span class=c1>// python默认环境路径
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;python.venvPath&#34;</span><span class=p>:</span> <span class=s2>&#34;D:/Miniconda3/envs&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// &#34;python.pythonPath&#34;: &#34;D:/Miniconda3/envs/cv/python.exe&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>    
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;python.dataScience.askForKernelRestart&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>    
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;python.terminal.activateEnvironment&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span> <span class=c1>// cond环境默认激活
+</span></span></span><span class=line><span class=cl><span class=c1></span>    
+</span></span><span class=line><span class=cl>    <span class=c1>// java 
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// &#34;javahome&#34;:&#34;D:/java1.8.0&#34;,    // 默认环境路径
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>// c/c++ 
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;C_Cpp.default.compilerPath&#34;</span><span class=p>:</span> <span class=s2>&#34;D:/mingw64/bin/gcc.exe&#34;</span><span class=p>,</span> <span class=c1>// 默认环境路径
+</span></span></span><span class=line><span class=cl><span class=c1></span>    
+</span></span><span class=line><span class=cl>    <span class=c1>// code runner
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;code-runner.runInTerminal&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;code-runner.executorMap&#34;</span><span class=p>:{</span> <span class=c1>// 环境路径设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;python&#34;</span><span class=p>:</span> <span class=s2>&#34;cd $dir &amp;&amp; python $fileName &#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// &#34;java&#34;: &#34;cd $dir &amp;&amp; javac -encoding utf-8 $fileName &amp;&amp; java $fileNameWithoutExt&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;c&#34;</span>     <span class=p>:</span> <span class=s2>&#34;cd $dir &amp;&amp; gcc $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt&#34;</span><span class=p>,</span>                
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;cpp&#34;</span> <span class=p>:</span> <span class=s2>&#34;cd $dir &amp;&amp; g++ $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt&#34;</span><span class=p>,</span>       
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;code-runner.saveFileBeforeRun&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;code-runner.preserveFocus&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span> <span class=c1>// 若为false，run code后光标会聚焦到终端上。如果需要频繁输入数据可设为false        
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;code-runner.clearPreviousOutput&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span> <span class=c1>// 每次run code前清空属于code runner的终端消息
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>// git路径设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;git.path&#34;</span><span class=p>:</span> <span class=s2>&#34;D:/Git/bin/git.exe&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// sync
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// &#34;sync.forceUpload&#34;: true,
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// &#34;sync.gist&#34;: &#34;3fa28d5fe3c672683e7624d811c39597&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>//vsicons
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;vsicons.dontShowNewVersionMessage&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// terminal设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;terminal.integrated.cursorBlinking&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;terminal.integrated.confirmOnExit&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;terminal.integrated.copyOnSelection&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;terminal.integrated.commandsToSkipShell&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;workbench.action.terminal.copySelection&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;workbench.action.terminal.paste&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;terminal.integrated.lineHeight&#34;</span><span class=p>:</span> <span class=mf>1.2</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;terminal.integrated.letterSpacing&#34;</span><span class=p>:</span> <span class=mf>0.1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;terminal.integrated.fontSize&#34;</span><span class=p>:</span> <span class=mi>15</span><span class=p>,</span> <span class=c1>//字体大小设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;terminal.integrated.fontFamily&#34;</span><span class=p>:</span> <span class=s2>&#34;Lucida Console&#34;</span><span class=p>,</span> <span class=c1>//字体设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;terminal.integrated.cursorStyle&#34;</span><span class=p>:</span> <span class=s2>&#34;line&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>//代码格式化 pip install yapf,flake8
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;python.formatting.provider&#34;</span><span class=p>:</span> <span class=s2>&#34;yapf&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;python.formatting.yapfArgs&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;--style&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;{based_on_style: chromium, indent_width: 4}&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;python.linting.pylintEnabled&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// &#34;python.linting.flake8Enabled&#34;: true,
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// &#34;python.linting.flake8CategorySeverity.F&#34;: &#34;Information&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// &#34;python.linting.flake8Args&#34;: [
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//     &#34;--max-line-length=248&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//     // &#34;--extend-ignore=F401&#34;,    //忽略某种错误
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// ],
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>//TODO设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;todo-tree.highlights.customHighlight&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;TODO&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;check&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;foreground&#34;</span><span class=p>:</span> <span class=s2>&#34;#000&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;background&#34;</span><span class=p>:</span> <span class=s2>&#34;#cecb32&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;iconColour&#34;</span><span class=p>:</span> <span class=s2>&#34;#fffc43&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;FIXME&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;alert&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;foreground&#34;</span><span class=p>:</span> <span class=s2>&#34;#fff&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;background&#34;</span><span class=p>:</span> <span class=s2>&#34;#ca4848&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;iconColour&#34;</span><span class=p>:</span> <span class=s2>&#34;#ff4343&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;todo-tree.highlights.defaultHighlight&#34;</span><span class=p>:</span> <span class=p>{</span> <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;text&#34;</span><span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;todo-tree.tree.showScanModeButton&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// markdown
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;markdown.preview.fontSize&#34;</span><span class=p>:</span> <span class=mi>16</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;markdown-preview-enhanced.previewTheme&#34;</span><span class=p>:</span> <span class=s2>&#34;github-dark.css&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// 字体, 大小和格式设置
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;editor.minimap.enabled&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;editor.fontSize&#34;</span><span class=p>:</span> <span class=mi>18</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;explorer.confirmDelete&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;workbench.iconTheme&#34;</span><span class=p>:</span> <span class=s2>&#34;vscode-icons&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;editor.fontWeight&#34;</span><span class=p>:</span> <span class=s2>&#34;400&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;editor.lineHeight&#34;</span><span class=p>:</span> <span class=mi>24</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;editor.tabSize&#34;</span><span class=p>:</span><span class=mi>4</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;editor.letterSpacing&#34;</span><span class=p>:</span> <span class=mf>0.5</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>       <span class=nt>&#34;editor.rulers&#34;</span><span class=p>:</span> <span class=p>[</span><span class=mi>80</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;editor.wordWrap&#34;</span><span class=p>:</span> <span class=s2>&#34;on&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//文件保存
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;files.autoSave&#34;</span><span class=p>:</span> <span class=s2>&#34;onFocusChange&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 文件排除
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;files.exclude&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;**/__pycache__&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;**/.history&#34;</span><span class=p>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;remote.SSH.showLoginTerminal&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;workbench.colorTheme&#34;</span><span class=p>:</span> <span class=s2>&#34;Monokai Dimmed&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=编译置 class=headerLink><a href=#%e7%bc%96%e8%af%91%e7%bd%ae class=header-mark></a>编译置</h2><h3 id=1tasksjson class=headerLink><a href=#1tasksjson class=header-mark></a>1、tasks.json</h3><ul><li><a href=https://code.visualstudio.com/docs/cpp/config-msvc#_run-vs-code-outside-the-developer-command-prompt target=_blank rel="noopener noreffer">link</a></li><li>设置指令编译代码。</li><li><code>shift+ctrl+p</code>-><code>tasks.json</code>。</li><li>C/C++ 编译路径。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// See https://go.microsoft.com/fwlink/?LinkId=733558
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// for the documentation about the tasks.json format
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=s2>&#34;2.0.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;tasks&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;taskName&#34;</span><span class=p>:</span> <span class=s2>&#34;Python&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;shell&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;command&#34;</span><span class=p>:</span> <span class=s2>&#34;${workspaceRoot}/env/bin/python3.5&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;args&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;${file}&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;presentation&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;reveal&#34;</span><span class=p>:</span> <span class=s2>&#34;always&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;panel&#34;</span><span class=p>:</span> <span class=s2>&#34;shared&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;group&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;kind&#34;</span><span class=p>:</span> <span class=s2>&#34;build&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;isDefault&#34;</span><span class=p>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;shell&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;label&#34;</span><span class=p>:</span> <span class=s2>&#34;compile&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;command&#34;</span><span class=p>:</span> <span class=s2>&#34;g++&#34;</span><span class=p>,</span>  <span class=c1>// 编译路径 gcc c语言
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// &#34;command&#34;: &#34;D:/mingw64/bin/g++.exe&#34;, 
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;args&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;-g&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;-std=c++11&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;${file}&#34;</span><span class=p>,</span>  <span class=c1>// # &#34;${workspaceFolder}/*.cpp&#34; 多文件编译
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=s2>&#34;-o&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;${fileDirname}\\${fileBasenameNoExtension}.exe&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;problemMatcher&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;$gcc&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;group&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;kind&#34;</span><span class=p>:</span> <span class=s2>&#34;build&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;isDefault&#34;</span><span class=p>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=2c_cpp_propertiesjson class=headerLink><a href=#2c_cpp_propertiesjson class=header-mark></a>2、c_cpp_properties.json</h3><ul><li>头文件导入和自动补全。</li><li><code>ctrl+shift+p</code> -> <code>C/Cpp: Edit configurations </code>。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;configurations&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Win32&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;includePath&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;${workspaceFolder}/**&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;D:/mingw64//include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;D:/mingw64//x86_64-w64-mingw32/include&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;defines&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;_DEBUG&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;UNICODE&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;_UNICODE&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;cStandard&#34;</span><span class=p>:</span> <span class=s2>&#34;c11&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;cppStandard&#34;</span><span class=p>:</span> <span class=s2>&#34;gnu++14&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;intelliSenseMode&#34;</span><span class=p>:</span> <span class=s2>&#34;clang-x64&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;browse&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;path&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;D:/mingw64/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;D:/mingw64/x86_64-w64-mingw32/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;${workspaceRoot}&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=p>],</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;limitSymbolsToIncludedHeaders&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;databaseFilename&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;compilerPath&#34;</span><span class=p>:</span>  <span class=s2>&#34;D:/mingw64/bin/g++.exe&#34;</span> 
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Mac&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;includePath&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;/usr/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;/usr/local/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;${workspaceRoot}&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;defines&#34;</span><span class=p>:</span> <span class=p>[],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;intelliSenseMode&#34;</span><span class=p>:</span> <span class=s2>&#34;clang-x64&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;browse&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;path&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;/usr/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;/usr/local/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;${workspaceRoot}&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=p>],</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;limitSymbolsToIncludedHeaders&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;databaseFilename&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;macFrameworkPath&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;/System/Library/Frameworks&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;/Library/Frameworks&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Linux&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;includePath&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;/usr/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;/usr/local/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;${workspaceRoot}&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;defines&#34;</span><span class=p>:</span> <span class=p>[],</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;intelliSenseMode&#34;</span><span class=p>:</span> <span class=s2>&#34;clang-x64&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;browse&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;path&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;/usr/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;/usr/local/include&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;${workspaceRoot}&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=p>],</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;limitSymbolsToIncludedHeaders&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;databaseFilename&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>],</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=mi>4</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=调试 class=headerLink><a href=#%e8%b0%83%e8%af%95 class=header-mark></a>调试</h2><h3 id=1调试配置launchjson class=headerLink><a href=#1%e8%b0%83%e8%af%95%e9%85%8d%e7%bd%aelaunchjson class=header-mark></a>1、调试配置launch.json</h3><ul><li>launch.json设置执行环境来执行代码。</li><li>Run(ctrl+shift+d)->Add Configuration->python 或者cC++(GDB/LLDB)->生成launch.json。</li><li>设置python路径。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Use IntelliSense to learn about possible attributes.
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// Hover to view descriptions of existing attributes.
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=s2>&#34;0.2.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;configurations&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Python&#34;</span><span class=p>,</span>            <span class=c1>// 调试名称
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;python&#34;</span><span class=p>,</span>            <span class=c1>// 语言
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;request&#34;</span><span class=p>:</span> <span class=s2>&#34;launch&#34;</span><span class=p>,</span>         
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;program&#34;</span><span class=p>:</span> <span class=s2>&#34;${file}&#34;</span><span class=p>,</span>     
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;console&#34;</span><span class=p>:</span> <span class=s2>&#34;integratedTerminal&#34;</span><span class=p>,</span> <span class=c1>// vscode终端
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;stopOnEntry&#34;</span><span class=p>:</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;C/C++ (gdb) Launch&#34;</span><span class=p>,</span> <span class=c1>// 调试名称
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;cppdbg&#34;</span><span class=p>,</span>             <span class=c1>// 语言
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;request&#34;</span><span class=p>:</span> <span class=s2>&#34;launch&#34;</span><span class=p>,</span>          <span class=c1>//launch(直接调试)和attach（附加）。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;program&#34;</span><span class=p>:</span> <span class=s2>&#34;${fileDirname}/${fileBasenameNoExtension}.exe&#34;</span><span class=p>,</span> <span class=c1>//程序所在路径和程序名。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;args&#34;</span><span class=p>:</span> <span class=p>[],</span>                   <span class=c1>// 填命令行参数（main函数的形参）。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;stopAtEntry&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>         <span class=c1>// 开始运行程序时，直接暂停。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;cwd&#34;</span><span class=p>:</span> <span class=s2>&#34;${workspaceFolder}&#34;</span><span class=p>,</span>  <span class=c1>// 目标工作目录。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;environment&#34;</span><span class=p>:</span> <span class=p>[],</span>            <span class=c1>// 临时手动添加环境变量。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;externalConsole&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>     <span class=c1>// 是否在运行时额外打开终端。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;MIMode&#34;</span><span class=p>:</span> <span class=s2>&#34;gdb&#34;</span><span class=p>,</span>              <span class=c1>// 指定调试器gdb或lldb。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;miDebuggerPath&#34;</span><span class=p>:</span> <span class=s2>&#34;gdb&#34;</span><span class=p>,</span>      <span class=c1>// 调试环境路径。
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=c1>// &#34;miDebuggerPath&#34;: &#34;D:/mingw64/bin/gdb.exe&#34;,   
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=nt>&#34;preLaunchTask&#34;</span><span class=p>:</span> <span class=s2>&#34;compile&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=nt>&#34;setupCommands&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>                <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Enable pretty-printing for gdb&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;-enable-pretty-printing&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=nt>&#34;ignoreFailures&#34;</span><span class=p>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>],</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=2调试命令 class=headerLink><a href=#2%e8%b0%83%e8%af%95%e5%91%bd%e4%bb%a4 class=header-mark></a>2、调试命令</h3><p><code>Step Into</code>：单步执行，遇到子函数就进入并且继续单步执行（简而言之，进入子函数）；</p><p><code>Step Over</code>：在单步执行时，在函数内遇到子函数时不会进入子函数内单步执行，而是将子函数整个执行完再停止，也就是把子函数整个作为一步。</p><p><code>Step Out</code>：当单步执行到子函数内时，用step out就可以执行完子函数余下部分，并返回到上一层函数。</p><p><code>Continue</code>: 执行到下一个断点。</p><p><code>Restart</code>：重头开始。</p><p><code>stop</code>：退出。</p><h3 id=3debug-console class=headerLink><a href=#3debug-console class=header-mark></a>3、Debug console</h3><p>实现交互功能，命令查看.</p><h2 id=用户脚本-user-snippet class=headerLink><a href=#%e7%94%a8%e6%88%b7%e8%84%9a%e6%9c%ac-user-snippet class=header-mark></a>用户脚本 User Snippet</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span><span class=lnt>85
+</span><span class=lnt>86
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=c1>// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// same ids are connected.
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// Example:
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// &#34;Print to console&#34;: {
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// 	&#34;prefix&#34;: &#34;log&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// 	&#34;body&#34;: [
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// 		&#34;console.log(&#39;$1&#39;);&#34;,
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// 		&#34;$2&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// 	],
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// 	&#34;description&#34;: &#34;Log output to console&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=c1>// }
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nt>&#34;HEADER&#34;</span><span class=p>:</span> <span class=p>{</span>        
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;prefix&#34;</span><span class=p>:</span> <span class=s2>&#34;header&#34;</span><span class=p>,</span>        
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;body&#34;</span><span class=p>:</span> <span class=p>[</span>            
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;#!/usr/bin/env/python&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;# -*- encoding: utf-8 -*-&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;\&#34;\&#34;\&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;################################################################################&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;@File              :   $TM_FILENAME&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;@Time              :   $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;@Author            :   Lyangly &#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;@Version           :   1.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;@Desc              :   None&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;################################################################################&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;\&#34;\&#34;\&#34;&#34;</span><span class=p>,</span>       
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>  
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>  
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;# standard packages&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;# third-party packages&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;# sub-toolkit packages&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=p>],</span>	
+</span></span><span class=line><span class=cl>	<span class=p>},</span>
+</span></span><span class=line><span class=cl>	<span class=nt>&#34;PARSE_ARGS&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;prefix&#34;</span><span class=p>:</span> <span class=s2>&#34;parse_args&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;body&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;def parse_args():&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    parser = argparse.ArgumentParser(description=\&#34;test\&#34;)&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    parser.add_argument(\&#34;--path\&#34;, type=str, default=\&#34;.\&#34;, help=\&#34;Project Path\&#34;)&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    return parser.parse_args()&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;def main():&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    function(**vars(parse_args()))&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;if __name__ == &#39;__main__&#39;:&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    main()&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=p>],</span>
+</span></span><span class=line><span class=cl>	<span class=p>},</span>
+</span></span><span class=line><span class=cl>	<span class=nt>&#34;COMMENT&#34;</span><span class=p>:</span> <span class=p>{</span>        
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;prefix&#34;</span><span class=p>:</span> <span class=s2>&#34;comment&#34;</span><span class=p>,</span>        
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;body&#34;</span><span class=p>:</span> <span class=p>[</span>            
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;r\&#34;\&#34;\&#34;Overview&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>             
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;Description&#34;</span><span class=p>,</span>                      
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;Args:&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    variable (type): introduction&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;Returns:&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    variable (type): introduction&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;.. warning::&#34;</span><span class=p>,</span>       
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    context&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;.. note::&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    context&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;Example::&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;    &gt;&gt;&gt; model = class()&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;\&#34;\&#34;\&#34;&#34;</span><span class=p>,</span>                
+</span></span><span class=line><span class=cl>		<span class=p>],</span>	
+</span></span><span class=line><span class=cl>	<span class=p>},</span>
+</span></span><span class=line><span class=cl>	<span class=nt>&#34;TODO&#34;</span><span class=p>:</span> <span class=p>{</span>        
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;prefix&#34;</span><span class=p>:</span> <span class=s2>&#34;todo&#34;</span><span class=p>,</span>        
+</span></span><span class=line><span class=cl>		<span class=nt>&#34;body&#34;</span><span class=p>:</span> <span class=p>[</span>                     
+</span></span><span class=line><span class=cl>				<span class=s2>&#34;# TODO:(Lyangly,522927317@qq.com) &#34;</span><span class=p>,</span>                           
+</span></span><span class=line><span class=cl>			<span class=p>],</span>	
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=插件 class=headerLink><a href=#%e6%8f%92%e4%bb%b6 class=header-mark></a>插件</h2><h3 id=1git class=headerLink><a href=#1git class=header-mark></a>1、Git</h3><p>命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ctrl+shift+G
+</span></span></code></pre></td></tr></table></div></div><p><strong>需要忽略.history文件夹</strong>:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>touch .gitignore
+</span></span><span class=line><span class=cl>###################
+</span></span><span class=line><span class=cl>.history
+</span></span><span class=line><span class=cl>.vscode
+</span></span><span class=line><span class=cl>################
+</span></span><span class=line><span class=cl># settings -&gt; files.exclude 
+</span></span><span class=line><span class=cl>**/.history
+</span></span><span class=line><span class=cl>**/.vscode
+</span></span><span class=line><span class=cl>**/__pycache\__
+</span></span></code></pre></td></tr></table></div></div><h3 id=2local-history class=headerLink><a href=#2local-history class=header-mark></a>2、Local History</h3><h3 id=3git-history class=headerLink><a href=#3git-history class=header-mark></a>3、git history</h3><h3 id=4python class=headerLink><a href=#4python class=header-mark></a>4、python</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&#34;python.pythonPath&#34;: &#34;D:/Miniconda3/envs/speech/python.exe&#34;,
+</span></span></code></pre></td></tr></table></div></div><h3 id=5cc class=headerLink><a href=#5cc class=header-mark></a>5、c/c++</h3><h3 id=6todo-highlight-和-todo-tree class=headerLink><a href=#6todo-highlight-%e5%92%8c-todo-tree class=header-mark></a>6、TODO highlight 和 Todo Tree</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=c1>// ctrl+shift+p-&gt;settings.son
+</span></span></span><span class=line><span class=cl><span class=c1>//TODO设置
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=s2>&#34;todo-tree.highlights.customHighlight&#34;</span><span class=err>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=nt>&#34;TODO&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;check&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;foreground&#34;</span><span class=p>:</span> <span class=s2>&#34;#000&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;background&#34;</span><span class=p>:</span> <span class=s2>&#34;#cecb32&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;iconColour&#34;</span><span class=p>:</span> <span class=s2>&#34;#fffc43&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>},</span>
+</span></span><span class=line><span class=cl><span class=nt>&#34;FIXME&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;alert&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;foreground&#34;</span><span class=p>:</span> <span class=s2>&#34;#fff&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;background&#34;</span><span class=p>:</span> <span class=s2>&#34;#ca4848&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;iconColour&#34;</span><span class=p>:</span> <span class=s2>&#34;#ff4343&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span><span class=err>,</span>
+</span></span><span class=line><span class=cl><span class=s2>&#34;todo-tree.highlights.defaultHighlight&#34;</span><span class=err>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;text&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span><span class=err>,</span>
+</span></span><span class=line><span class=cl><span class=s2>&#34;todo-tree.tree.showScanModeButton&#34;</span><span class=err>:</span> <span class=kc>false</span><span class=err>,</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=7vscode-icons class=headerLink><a href=#7vscode-icons class=header-mark></a>7、vscode-icons</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>// ctrl+shift+p-&gt;settings.son
+</span></span><span class=line><span class=cl>&#34;vsicons.dontShowNewVersionMessage&#34;: true,
+</span></span></code></pre></td></tr></table></div></div><h3 id=8coder-runner class=headerLink><a href=#8coder-runner class=header-mark></a>8、Coder Runner</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>// ctrl+shift+p-&gt;settings.son
+</span></span><span class=line><span class=cl>// code runner
+</span></span><span class=line><span class=cl> &#34;code-runner.runInTerminal&#34;: true,
+</span></span><span class=line><span class=cl> &#34;code-runner.executorMap&#34;:{
+</span></span><span class=line><span class=cl>    &#34;java&#34;: &#34;cd $dir &amp;&amp; javac -encoding utf-8 $fileName &amp;&amp; java $fileNameWithoutExt&#34;
+</span></span><span class=line><span class=cl>},
+</span></span></code></pre></td></tr></table></div></div><h3 id=9markdown-plugh class=headerLink><a href=#9markdown-plugh class=header-mark></a>9、Markdown plugh</h3><ul><li><code>Markdown Preview Enhanced</code>, <code>markdownlint</code>和<code>Markdown All in One</code>。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>// ctrl+shift+p-&gt;settings.son
+</span></span><span class=line><span class=cl>// markdown
+</span></span><span class=line><span class=cl>&#34;markdown.preview.fontSize&#34;: 16,
+</span></span><span class=line><span class=cl>&#34;markdown-preview-enhanced.previewTheme&#34;: &#34;github-dark.css&#34;,
+</span></span></code></pre></td></tr></table></div></div><p>问题：markdown 图片不能显示</p><ol><li>在VScode编辑页面，按快捷键Ctrl+Shift+P，搜索markdown更改预览安全设置，选择允许不安全内容，即可显示预览网页图片。</li><li>本地图片显示预览，要注意.md文件的路径和图片存放的路径，使用图片的相对路径即可显示预览。（注意路径不能有引号" &ldquo;）。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>![<span class=nt>abs</span>](<span class=na>./RE32bIh_1920x1080.jpg</span>)
+</span></span></code></pre></td></tr></table></div></div><h3 id=10picgo class=headerLink><a href=#10picgo class=header-mark></a>10、picgo</h3><ol><li><p>github配置，github -> Settings -> Developer settings -> Personal access tokens -> vscode sync-gist -> tokens->repo。</p></li><li><p>picgo 配置，vsocde->extensions->picgo->extension setting。</p></li><li><p>无法加载github图片：复制这一段代码到<code>C:\Windows\System32\drivers\etc</code>下的hosts文件。</p></li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># GitHub Start 
+</span></span><span class=line><span class=cl>192.30.253.112 github.com 
+</span></span><span class=line><span class=cl>192.30.253.119 gist.github.com
+</span></span><span class=line><span class=cl>151.101.184.133 assets-cdn.github.com
+</span></span><span class=line><span class=cl>151.101.184.133 raw.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 gist.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 cloud.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 camo.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars0.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars1.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars2.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars3.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars4.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars5.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars6.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars7.githubusercontent.com
+</span></span><span class=line><span class=cl>151.101.184.133 avatars8.githubusercontent.com
+</span></span></code></pre></td></tr></table></div></div><p>注意：需要修改权限：右键hosts文件属性-安全-编辑-添加-高级-立即查找，选择你的账户，确定-确定，勾选“完全控制”，确定-确定即可。</p><h3 id=11java-extension-pack class=headerLink><a href=#11java-extension-pack class=header-mark></a>11、Java Extension Pack</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>// setting.json
+</span></span><span class=line><span class=cl>&#34;java.home&#34; = D:/jdk-1.8
+</span></span></code></pre></td></tr></table></div></div><p>java调试：<code>ctrl+shift+p</code> -><code>java Open java language server log file</code>打开日志查看问题原因。</p><p>问题：<code>BUILD FAILED, DO YOU WANT TO CONTINUE?</code></p><ul><li>原因：.histoy文件夹缓存java文件问题</li><li>解决：local histoy忽略java文件</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=s2>&#34;local-history.exclude&#34;</span><span class=err>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl><span class=s2>&#34;**/.history/**&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=s2>&#34;**/*.java&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=12settings-sync class=headerLink><a href=#12settings-sync class=header-mark></a>12、Settings Sync</h3><ol><li>插件栏搜索Settings Sync并安装。安装完之后会弹出一个登陆界面,这里点击login with github，直到<code>Success! You may now close this tab</code>。</li><li>进入github -> Settings -> Developer settings -> Personal access tokens -> vscode sync-gist -> tokens。</li><li>回到VSCode配置将token配置到本地，ctrl+shift+p-><code>sync:advanced option</code>->syns:打开设置，配置vscode sync-gist的tokens。</li><li>设置上同步上传设置。(Sync: Update / Uplaod Settings) Shift + Alt + U 在弹窗里输入你的token， 回车后会生成syncSummary.txt文件。</li><li>设置上同步下载设置。(Sync: Download Settings) Shift + Alt + D 在弹窗里输入你的gist值，稍后片刻便可同步成功。</li><li>如果要重置同步设置，变更其它token。Ctrl+P / F1 弹出输入>sync，即可重新配置你的其它token来同步。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>vscode://vscode.github-authentication/did-authenticate?windowid=1&amp;code=15f3e2a834ec565b4783&amp;state=2d01d65e-7c1a-4f55-b67e-dcde2994cf71
+</span></span></code></pre></td></tr></table></div></div><h3 id=13remote-wsl class=headerLink><a href=#13remote-wsl class=header-mark></a>13、Remote-WSL</h3><p>WSL linux开发。</p><h3 id=14remote-ssh class=headerLink><a href=#14remote-ssh class=header-mark></a>14、Remote-SSH</h3><ol><li>生成密钥id_rsa1.pub并上传到远程服务器上.ssh目录下。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ <span class=nb>cd</span> ~/.ssh
+</span></span><span class=line><span class=cl>$ ssh-keygen
+</span></span><span class=line><span class=cl>$ ls 
+</span></span><span class=line><span class=cl>-a----         2020/9/12     20:21            <span class=m>128</span> config
+</span></span><span class=line><span class=cl>-a----         2020/9/12     20:24           <span class=m>1679</span> id_rsa
+</span></span><span class=line><span class=cl>-a----         2020/9/12     20:24            <span class=m>396</span> id_rsa.pub
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>用ssh命令（ssh username@ip -p port）连接远程主机，并将<code>id\_rsa1.pub</code>加入到<code>authorized_keys</code>中。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ ssh username@ip -p port
+</span></span><span class=line><span class=cl>$ <span class=nb>cd</span> .ssh
+</span></span><span class=line><span class=cl>$ ssh-add ~/.ssh/id_ras
+</span></span><span class=line><span class=cl><span class=c1># Could not open a connection to your authentication agent</span>
+</span></span><span class=line><span class=cl>$ ssh-agent bash
+</span></span><span class=line><span class=cl>$ cat id_rsa.pub &gt;&gt; authorized_keys
+</span></span><span class=line><span class=cl>$ <span class=nb>exit</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>用私钥登录，此次登录无需输入密码。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ ssh username@ip -p port –i id_rsa
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>配置文件Remote SSH。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Remote explorer -&gt; configure -&gt; ~/.ssh/config</span>
+</span></span><span class=line><span class=cl><span class=c1># .vscode\extensions\ms-vscode-remote.remote-ssh-0.54.0</span>
+</span></span><span class=line><span class=cl>Host 连接的主机的名称，可自定
+</span></span><span class=line><span class=cl>    Hostname 远程主机的IP地址
+</span></span><span class=line><span class=cl>    User 用于登录远程主机的用户名
+</span></span><span class=line><span class=cl>    Port <span class=m>22</span>
+</span></span><span class=line><span class=cl>    IdentityFile ~/.ssh/id_rsa
+</span></span><span class=line><span class=cl>    PreferredAuthentications publickey
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>问题：
+</span></span><span class=line><span class=cl>exec request failed, try username/server/account as login name.
+</span></span></code></pre></td></tr></table></div></div><ol start=5><li>注意：修改ssh免密登录</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ sudo vim /etc/ssh/sshd_config 
+</span></span><span class=line><span class=cl><span class=c1># PermitRootLogin prohibit-password </span>
+</span></span><span class=line><span class=cl>PermitRootLogin yes
+</span></span><span class=line><span class=cl>PubkeyAuthentication no
+</span></span><span class=line><span class=cl>PasswordAuthentication no
+</span></span></code></pre></td></tr></table></div></div><ol start=6><li>过程试图写入的管道不存在。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Remote explorer -&gt; configure -&gt; ~/.ssh/config</span>
+</span></span><span class=line><span class=cl><span class=c1># 127.0.0.1</span>
+</span></span><span class=line><span class=cl>Host Linux_WSL
+</span></span><span class=line><span class=cl>    HostName 127.0.0.1
+</span></span><span class=line><span class=cl>    User ly
+</span></span><span class=line><span class=cl>    IdentityFile ~/.ssh/id_rsa 
+</span></span></code></pre></td></tr></table></div></div><h3 id=15docker class=headerLink><a href=#15docker class=header-mark></a>15、docker</h3><ul><li>Atom Material Theme</li><li>Beteer Align</li><li>Bracker Pair Colorizer</li><li>change-case: 代码格式 驼峰</li><li>koroFileHeader</li></ul><h3 id=16jupyter class=headerLink><a href=#16jupyter class=header-mark></a>16、Jupyter</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Enter : 转入编辑模式
+</span></span><span class=line><span class=cl>Shift-Enter : 运行本单元，选中或插入（最后一个Cell的时候）下个单元
+</span></span><span class=line><span class=cl>Ctrl-Enter : 运行本单元
+</span></span><span class=line><span class=cl>Alt-Enter : 运行本单元，在其下插入新单元
+</span></span><span class=line><span class=cl>Y : 单元转入代码状态
+</span></span><span class=line><span class=cl>M :单元转入markdown状态 （目前尚不支持R 原生状态）
+</span></span><span class=line><span class=cl>Up : 选中上方单元
+</span></span><span class=line><span class=cl>K : 选中上方单元
+</span></span><span class=line><span class=cl>Down : 选中下方单元
+</span></span><span class=line><span class=cl>J : 选中下方单元
+</span></span><span class=line><span class=cl>A : 在上方插入新单元
+</span></span><span class=line><span class=cl>B : 在下方插入新单元
+</span></span><span class=line><span class=cl>D,D : 删除选中的单元
+</span></span><span class=line><span class=cl>L : 转换行号
+</span></span><span class=line><span class=cl>Shift-Space : 向上滚动
+</span></span><span class=line><span class=cl>Space : 向下滚动    
+</span></span></code></pre></td></tr></table></div></div><h2 id=字体 class=headerLink><a href=#%e5%ad%97%e4%bd%93 class=header-mark></a>字体</h2><ol><li>打开vscode的配置页面，并搜索font。</li><li>修改editor.fontFamily配置项的内容为：&lsquo;Fira Code Retina&rsquo;, &lsquo;Sarasa Term SC Regular&rsquo;。Fira Code为首选字体，更纱黑体为备选字体。</li><li>勾选editor.fontLigatures配置，启用连字符。</li><li>配置字体过程中若提示字体无法识别，尝试配置后重启vscode。</li><li>返回vscode编辑器，输入@，r，&字符验证字体是否生效。</li></ol><h2 id=参考 class=headerLink><a href=#%e5%8f%82%e8%80%83 class=header-mark></a>参考</h2><p>[1] <a href=https://www.cnblogs.com/moshuying/p/11348634.html target=_blank rel="noopener noreffer">https://www.cnblogs.com/moshuying/p/11348634.html</a><br>[2] <a href=https://www.cnblogs.com/kenz520/p/7416836.html target=_blank rel="noopener noreffer">https://www.cnblogs.com/kenz520/p/7416836.html</a></p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2020-01-01</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/%E8%BD%AF%E4%BB%B6/>软件</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x07%E7%BD%91%E7%BB%9C%E6%B5%8F%E8%A7%88%E5%99%A8chrome/ class=prev rel=prev title="网络浏览器 Chrome"><i class="fas fa-angle-left fa-fw"></i>网络浏览器 Chrome</a>
+<a href=/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x03%E7%A1%AC%E7%9B%98hdd/ class=next rel=next title="硬盘 Hard Disk Drive">硬盘 Hard Disk Drive<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/about/ target=_blank rel="noopener noreferrer">Yangliuly1</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div><div class=footer-line></div><div class=footer-line></div></div><script>"serviceWorker"in navigator&&(navigator.serviceWorker.register("/sw.min.js",{scope:"/"}).then(function(){}),navigator.serviceWorker.ready.then(function(){}))</script></footer></div><div id=fixed-buttons><a href=#back-to-top id=back-to-top-button class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw"></i></a></div><div class=assets><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/tablesort/tablesort.min.js></script><script type=text/javascript src=/lib/topbar/topbar.min.js></script><script type=text/javascript src=/lib/pjax/pjax.min.js></script><script type=text/javascript src=/js/theme.min.js defer></script></div><div class=pjax-assets><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:10},comment:{},data:{"desktop-header-typeit":"日落跌进迢迢星野,人间忽晚,山河已秋!","mobile-header-typeit":"日落跌进迢迢星野,人间忽晚,山河已秋!"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},table:{sort:!0},typeit:{cursorChar:"|",cursorSpeed:1e3,data:{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},duration:-1,speed:100}}</script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/typeit/typeit.min.js></script><script type=text/javascript src=/lib/katex/katex.min.js defer></script><script type=text/javascript src=/lib/katex/auto-render.min.js defer></script><script type=text/javascript src=/lib/katex/copy-tex.min.js defer></script><script type=text/javascript src=/lib/katex/mhchem.min.js defer></script><script type=text/javascript src=/js/katex.min.js defer></script><link rel=stylesheet href=/lib/katex/katex.min.css><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/lib/katex/copy-tex.min.css><noscript><link rel=stylesheet href=/lib/katex/copy-tex.min.css></noscript></div></body></html>

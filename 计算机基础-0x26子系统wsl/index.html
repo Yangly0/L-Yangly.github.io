@@ -1,0 +1,190 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title class=pjax-title>子系统 Windows WSL - Yang</title><meta name=Description content><meta property="og:title" content="子系统 Windows WSL"><meta property="og:description" content="摘要：Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的Ubuntu、Debian等映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。"><meta property="og:type" content="article"><meta property="og:url" content="https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x26%E5%AD%90%E7%B3%BB%E7%BB%9Fwsl/"><meta property="og:image" content="https://Yangliuly1.github.io/images/avatar.webp"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-01-01T08:00:00+08:00"><meta property="article:modified_time" content="2020-01-01T08:00:00+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://Yangliuly1.github.io/images/avatar.webp"><meta name=twitter:title content="子系统 Windows WSL"><meta name=twitter:description content="摘要：Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的Ubuntu、Debian等映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。"><meta name=application-name content="Yang"><meta name=apple-mobile-web-app-title content="Yang"><meta name=theme-color content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x26%E5%AD%90%E7%B3%BB%E7%BB%9Fwsl/><link rel=prev href=https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x08%E6%8A%A4%E7%9C%BC%E8%BD%AF%E4%BB%B6/><link rel=next href=https://Yangliuly1.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x09%E5%A4%9A%E8%A7%86%E7%AA%97screen/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/lib/fontawesome-free/all.min.css><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/lib/animate/animate.min.css><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"子系统 Windows WSL","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/Yangliuly1.github.io\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x26%E5%AD%90%E7%B3%BB%E7%BB%9Fwsl\/"},"genre":"posts","keywords":"软件","wordcount":499,"url":"https:\/\/Yangliuly1.github.io\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x26%E5%AD%90%E7%B3%BB%E7%BB%9Fwsl\/","datePublished":"2020-01-01T08:00:00+08:00","dateModified":"2020-01-01T08:00:00+08:00","publisher":{"@type":"Organization","name":"Yangliuly1"},"author":{"@type":"Person","name":"Yangliuly1"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>function setTheme(e){document.body.setAttribute("theme",e),document.documentElement.style.setProperty("color-scheme",e==="light"?"light":"dark")}function saveTheme(e){window.localStorage&&localStorage.setItem("theme",e)}function getMeta(t){const e=document.getElementsByTagName("meta");for(let n=0;n<e.length;n++)if(e[n].getAttribute("name")===t)return e[n];return''}if(window.localStorage&&localStorage.getItem("theme")){let e=localStorage.getItem("theme");e==="light"||e==="dark"||e==="black"?setTheme(e):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?setTheme("dark"):setTheme("light")}else"auto"==="light"||"auto"==="dark"||"auto"==="black"?(setTheme("auto"),saveTheme("auto")):(saveTheme("auto"),window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?setTheme("dark"):setTheme("light"));let metaColors={light:"#f8f8f8",dark:"#252627",black:"#000000"};getMeta("theme-color").content=metaColors[document.body.getAttribute("theme")]</script><div id=back-to-top></div><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=Yang><span class=header-title-pre><i class="far fa-edit fa-fw"></i></span><span id=desktop-header-typeit class=typeit></span></a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=https://github.com/Yangliuly1 title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i> </a><span class="menu-item delimiter"></span><a href=# onclick=return!1 class="menu-item theme-select" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+<select class=color-theme-select id=theme-select-desktop title="Switch Theme"><option value=light>Light</option><option value=dark>Dark</option><option value=black>Black</option><option value=auto>Auto</option></select></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=Yang><span class=header-title-pre><i class="far fa-edit fa-fw"></i></span><span id=mobile-header-typeit class=typeit></span></a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=https://github.com/Yangliuly1 title=GitHub rel="noopener noreffer" target=_blank><i class="fab fa-github fa-fw"></i></a><a href=# onclick=return!1 class="menu-item theme-select" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+<select class=color-theme-select id=theme-select-mobile title="Switch Theme"><option value=light>Light</option><option value=dark>Dark</option><option value=black>Black</option><option value=auto>Auto</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class="toc-content always-active" id=toc-content-auto><nav id=TableOfContents><ul><li><a href=#wsl>WSL</a><ul><li><a href=#1安装>1、安装</a></li><li><a href=#2换源>2、换源</a></li></ul></li><li><a href=#wls2>WLS2</a><ul><li><a href=#1windows版本与更新>1、Windows版本与更新</a></li><li><a href=#2配置>2、配置</a></li><li><a href=#3安装>3、安装</a></li></ul></li><li><a href=#wsl-命令>WSL 命令</a></li><li><a href=#lxrunoffline>LxRunOffline</a><ul><li><a href=#1安装-1>1、安装</a></li><li><a href=#2常用命令>2、常用命令</a></li><li><a href=#3迁移demo>3、迁移demo</a></li></ul></li><li><a href=#cuda-on-wsl>CUDA on WSL</a><ul><li><a href=#1cuda-windows驱动>1、CUDA windows驱动</a></li><li><a href=#2wsl安装cuda-toolkit-101>2、WSL安装cuda toolkit 10.1</a></li></ul></li><li><a href=#问题>问题</a><ul><li><a href=#1-wslregisterdistribution-failed-with-error-0x800701bc>1. <code>WslRegisterDistribution failed with error: 0x800701bc</code></a></li></ul></li></ul></nav></div></div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle","normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC","true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">子系统 Windows WSL</h1><div class=post-meta><div class=post-meta-line><span class=post-author><i class="author fas fa-user-circle fa-fw"></i><a href=/about/ title=Author rel=author class=author>Yangliuly1</a>
+</span>&nbsp;<span class=post-category>included in </span>&nbsp;<span class=post-category>category <a href=/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/><i class="far fa-folder fa-fw"></i>计算机基础</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2020-01-01>2020-01-01</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime=2020-01-01>2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;499 words&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#wsl>WSL</a><ul><li><a href=#1安装>1、安装</a></li><li><a href=#2换源>2、换源</a></li></ul></li><li><a href=#wls2>WLS2</a><ul><li><a href=#1windows版本与更新>1、Windows版本与更新</a></li><li><a href=#2配置>2、配置</a></li><li><a href=#3安装>3、安装</a></li></ul></li><li><a href=#wsl-命令>WSL 命令</a></li><li><a href=#lxrunoffline>LxRunOffline</a><ul><li><a href=#1安装-1>1、安装</a></li><li><a href=#2常用命令>2、常用命令</a></li><li><a href=#3迁移demo>3、迁移demo</a></li></ul></li><li><a href=#cuda-on-wsl>CUDA on WSL</a><ul><li><a href=#1cuda-windows驱动>1、CUDA windows驱动</a></li><li><a href=#2wsl安装cuda-toolkit-101>2、WSL安装cuda toolkit 10.1</a></li></ul></li><li><a href=#问题>问题</a><ul><li><a href=#1-wslregisterdistribution-failed-with-error-0x800701bc>1. <code>WslRegisterDistribution failed with error: 0x800701bc</code></a></li></ul></li></ul></nav></div></div><div class=content id=content><p>摘要：Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的Ubuntu、Debian等映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p><h1 id=子系统-windows-wsl class=headerLink><a href=#%e5%ad%90%e7%b3%bb%e7%bb%9f-windows-wsl class=header-mark></a>子系统 Windows WSL</h1><h2 id=wsl class=headerLink><a href=#wsl class=header-mark></a>WSL</h2><h3 id=1安装 class=headerLink><a href=#1%e5%ae%89%e8%a3%85 class=header-mark></a>1、安装</h3><p>配置:</p><ol><li>开始->设置->更新和安全->开发者选择->开发者模式</li><li><code>win+X</code>->应用和功能->相关设置->启动或关闭windows功能->适用于Linux的windows子系统</li></ol><p>安装:</p><ol><li>应用商店安装，搜索ubuntu，点击安装->设置账号和密码</li><li><code>win+R</code>-><code>$ lxrun /install /y</code>->设置账号和密码</li><li>安装目录<code>C:\Users\root\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc</code></li></ol><h3 id=2换源 class=headerLink><a href=#2%e6%8d%a2%e6%ba%90 class=header-mark></a>2、换源</h3><p>添加源内容：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ sudo vim /etc/apt/sources.list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+</span></span><span class=line><span class=cl>deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+</span></span></code></pre></td></tr></table></div></div><p>更新源内容：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ sudo apt-get update
+</span></span><span class=line><span class=cl>$ sudo apt-get upgrade
+</span></span></code></pre></td></tr></table></div></div><h2 id=wls2 class=headerLink><a href=#wls2 class=header-mark></a>WLS2</h2><h3 id=1windows版本与更新 class=headerLink><a href=#1windows%e7%89%88%e6%9c%ac%e4%b8%8e%e6%9b%b4%e6%96%b0 class=header-mark></a>1、Windows版本与更新</h3><p>Windwos版本 2004：<a href=http://b1.download.windowsupdate.com/d/upgr/2020/02/19041.84.200218-1143.vb_release_svc_refresh_clientconsumer_ret_x64fre_zh-cn_4755f5fabf915c618f41bfc5f280069373f5bc4f.esd target=_blank rel="noopener noreffer">link</a>。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 1. cmd -&gt;命令如下</span>
+</span></span><span class=line><span class=cl>&gt;&gt;&gt; Get-ComputerInfo <span class=p>|</span> <span class=k>select</span> WindowsProductName, WindowsVersion, OsHardwareAbstractionLayer
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>WindowsProductName WindowsVersion OsHardwareAbstractionLayer
+</span></span><span class=line><span class=cl>------------------ -------------- --------------------------
+</span></span><span class=line><span class=cl>Windows <span class=m>10</span> Pro     <span class=m>2004</span>           10.0.19041.1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. win+r -&gt; winver</span>
+</span></span></code></pre></td></tr></table></div></div><p>Windows 版本更新</p><ol><li>Win->设置->更新和安全->Windows预览体验计划 或 微软 Windows 10 易升。</li><li>如果此版本尚不受支持，可以手动更新。先找到安装文件，解析安装文件，手动安装，即<code>C:\Windows10Upgrade\Configuration.ini</code>->esd格式文件->格式转换为iso(DISM++)->解压->setup.</li></ol><h3 id=2配置 class=headerLink><a href=#2%e9%85%8d%e7%bd%ae class=header-mark></a>2、配置</h3><ol><li>管理员权限运行Windows PowerShell</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 开启Windows Subsystem for Linux特性</span>
+</span></span><span class=line><span class=cl><span class=c1>#dism.exe /online /enable-feature/featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</span>
+</span></span><span class=line><span class=cl><span class=c1># 开启Virtual Machine Platform特性</span>
+</span></span><span class=line><span class=cl><span class=c1>#dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 启用虚拟机平台</span>
+</span></span><span class=line><span class=cl>Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+</span></span><span class=line><span class=cl><span class=c1># 启用Linux子系统功能</span>
+</span></span><span class=line><span class=cl>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>命令执行完之后需要重启，根据情况选择自动或手动重启</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&gt;&gt;&gt; restart-computer
+</span></span></code></pre></td></tr></table></div></div><h3 id=3安装 class=headerLink><a href=#3%e5%ae%89%e8%a3%85 class=header-mark></a>3、安装</h3><ol><li>应用商店搜索并安装linux发行版本，以ubuntu为例，安装完成后输入账号和密码初始化登录。注意，以前安装过wsl，后来卸载了，可以点更新，重新安装。</li><li>确认wsl版本。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>wsl --list --verbose
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>需要先更新WSL 2 Linux 内核：<a href=https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel target=_blank rel="noopener noreffer">link</a>。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># 下载
+</span></span><span class=line><span class=cl>https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+</span></span><span class=line><span class=cl># 以批准此安装
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>设置WSL 2为默认版本。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ wsl --set-version Ubuntu-18.04 <span class=m>2</span> <span class=c1>#Ubuntu-18.04为我的Linux版本。</span>
+</span></span><span class=line><span class=cl>$ wsl --set-default-version <span class=m>2</span> <span class=c1>##该命令命令可以在以后安装 Linux 的时候默认启用 WSL2。</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=wsl-命令 class=headerLink><a href=#wsl-%e5%91%bd%e4%bb%a4 class=header-mark></a>WSL 命令</h2><ol><li>启动与关闭。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1>#启动默认的WSL2 和 Linux</span>
+</span></span><span class=line><span class=cl>$ wsl
+</span></span><span class=line><span class=cl>$ wsl -d Ubuntu-18.4 <span class=c1>#指定版本</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 关闭</span>
+</span></span><span class=line><span class=cl>$ wst -t <span class=o>[</span>name<span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=c1>#关闭所有正在运行的 Linux 和 WSL 2</span>
+</span></span><span class=line><span class=cl>$ wsl --shutdown
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>系统和版本查看。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ wsl -l 
+</span></span><span class=line><span class=cl>$ wsl -l -v
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>内存。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ wsl free -m
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>卸载。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 显示出你安装的列表。</span>
+</span></span><span class=line><span class=cl>$ wslconfig /l  
+</span></span><span class=line><span class=cl><span class=c1># #Ubuntu-18.04为上述列表中的名字   注销子系统</span>
+</span></span><span class=line><span class=cl>$ wslconfig /u Ubuntu-18.04
+</span></span><span class=line><span class=cl><span class=c1># 移除目录</span>
+</span></span><span class=line><span class=cl>$ get-appxpackage CanonicalGroupLimited.Ubuntu18.04onWindows <span class=p>|</span> remove-Appxpackage
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除对应文件夹</span>
+</span></span><span class=line><span class=cl>$ <span class=nb>cd</span> C:<span class=se>\U</span>sers<span class=se>\r</span>oot<span class=se>\A</span>ppData<span class=se>\L</span>ocal<span class=se>\P</span>ackages<span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>$ rm -rf CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc
+</span></span></code></pre></td></tr></table></div></div><h2 id=lxrunoffline class=headerLink><a href=#lxrunoffline class=header-mark></a>LxRunOffline</h2><h3 id=1安装-1 class=headerLink><a href=#1%e5%ae%89%e8%a3%85-1 class=header-mark></a>1、安装</h3><p>link：<a href=https://github.com/DDoSolitary/LxRunOffline/releases target=_blank rel="noopener noreffer">LxRunOffline</a>，下载即可使用LxRunOffline.exe。</p><p>环境配置：我的电脑->右键属性->高级系统设置->环境变量->系统变量Path->添加<code>../LxRunOffline.exe</code>。</p><h3 id=2常用命令 class=headerLink><a href=#2%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4 class=header-mark></a>2、常用命令</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>//已经安装的WSL
+</span></span><span class=line><span class=cl>$ LxRunOffline list 
+</span></span><span class=line><span class=cl>//还原WSL
+</span></span><span class=line><span class=cl>$ LxRunOffline install -n &lt;wsl_name&gt; -d &lt;res_path&gt; -f &lt;back_path&gt;
+</span></span><span class=line><span class=cl>//卸载WSL
+</span></span><span class=line><span class=cl>$ LxRunOffline uninstall -n &lt;wsl_name&gt;
+</span></span><span class=line><span class=cl>//备份WSL
+</span></span><span class=line><span class=cl>$ LxRunOffline <span class=nb>export</span> -n &lt;wsl_name&gt; -f &lt;back_path&gt;
+</span></span><span class=line><span class=cl>//启动一个WSL
+</span></span><span class=line><span class=cl>$ LxRunOffline run -n &lt;wslname&gt;
+</span></span></code></pre></td></tr></table></div></div><h3 id=3迁移demo class=headerLink><a href=#3%e8%bf%81%e7%a7%bbdemo class=header-mark></a>3、迁移demo</h3><p><strong>注意，对于WSL2，千万不能点击ex53.vhdx文件，否则无法访问。</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 查看系统</span>
+</span></span><span class=line><span class=cl>$ lxrunoffline list
+</span></span><span class=line><span class=cl><span class=c1># 先创建一个文件夹D:\Ubuntu，再移动到D:\Ubuntu</span>
+</span></span><span class=line><span class=cl>$ mkdir D:<span class=se>\U</span>buntu
+</span></span><span class=line><span class=cl>$ lxrunoffline move -n Ubuntu-18.04 -d D:<span class=se>\U</span>buntu
+</span></span><span class=line><span class=cl><span class=c1># 时间比较久。完成后，输入下面命令查看</span>
+</span></span><span class=line><span class=cl>$ lxrunoffline get-dir -n Ubuntu-18.04
+</span></span><span class=line><span class=cl><span class=c1># 若出现unregister错误只需用LxRunOffline重新注册一下即可</span>
+</span></span><span class=line><span class=cl>$ lxrunoffline register -n Ubuntu-18.04 -d D:<span class=se>\U</span>buntu
+</span></span></code></pre></td></tr></table></div></div><h2 id=cuda-on-wsl class=headerLink><a href=#cuda-on-wsl class=header-mark></a>CUDA on WSL</h2><h3 id=1cuda-windows驱动 class=headerLink><a href=#1cuda-windows%e9%a9%b1%e5%8a%a8 class=header-mark></a>1、CUDA windows驱动</h3><ul><li><p><a href=https://docs.nvidia.com/cuda/wsl-user-guide/index.html target=_blank rel="noopener noreffer">https://docs.nvidia.com/cuda/wsl-user-guide/index.html</a></p></li><li><p><a href="https://blog.csdn.net/xautzxc/article/details/107610353?utm_medium=distribute.pc_relevant.none-task-blog-title-8&spm=1001.2101.3001.4242" target=_blank rel="noopener noreffer">https://blog.csdn.net/xautzxc/article/details/107610353?utm_medium=distribute.pc_relevant.none-task-blog-title-8&spm=1001.2101.3001.4242</a></p></li><li><p>windows安装驱动： <a href=https://developer.nvidia.com/cuda/wsl/download target=_blank rel="noopener noreffer">https://developer.nvidia.com/cuda/wsl/download</a></p></li></ul><h3 id=2wsl安装cuda-toolkit-101 class=headerLink><a href=#2wsl%e5%ae%89%e8%a3%85cuda-toolkit-101 class=header-mark></a>2、WSL安装cuda toolkit 10.1</h3><ul><li><a href=https://developer.nvidia.com/cuda-toolkit target=_blank rel="noopener noreffer">WSL2 版本</a></li></ul><ol><li>安装，不需要安装nvidia-driver, 注意版本。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># https://developer.nvidia.com/cuda-toolkit</span>
+</span></span><span class=line><span class=cl>$ wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run
+</span></span><span class=line><span class=cl>$ sudo bash cuda_11.1.0_455.23.05_linux.run --no-opengl-libs
+</span></span><span class=line><span class=cl><span class=c1># Driver: Not Selected。  X表示选中</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>环境配置。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ <span class=nb>export</span> <span class=nv>PATH</span><span class=o>=</span>/usr/local/cuda-11.1/bin<span class=si>${</span><span class=nv>PATH</span><span class=p>:+:</span><span class=si>${</span><span class=nv>PATH</span><span class=si>}}</span>
+</span></span><span class=line><span class=cl>$ <span class=nb>export</span> <span class=nv>LD_LIBRARY_PATH</span><span class=o>=</span>/usr/local/cuda-11.1/lib64<span class=si>${</span><span class=nv>LD_LIBRARY_PATH</span><span class=p>:+:</span><span class=si>${</span><span class=nv>LD_LIBRARY_PATH</span><span class=si>}}</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>测试。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ <span class=nb>cd</span> ~/NVIDIA_CUDA-10.1_Samples/1_Utilities/deviceQuery
+</span></span><span class=line><span class=cl>make
+</span></span><span class=line><span class=cl>$ ./deviceQuery
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>卸载。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ <span class=nb>cd</span> /usr/local/cuda/bin
+</span></span><span class=line><span class=cl>$ ./cuda-uninstaller
+</span></span><span class=line><span class=cl>Successfully uninstalled
+</span></span></code></pre></td></tr></table></div></div><ol start=4><li>Miniconda安装</li></ol><h2 id=问题 class=headerLink><a href=#%e9%97%ae%e9%a2%98 class=header-mark></a>问题</h2><h3 id=1-wslregisterdistribution-failed-with-error-0x800701bc class=headerLink><a href=#1-wslregisterdistribution-failed-with-error-0x800701bc class=header-mark></a>1. <code>WslRegisterDistribution failed with error: 0x800701bc</code></h3><ul><li>官方的讨论连接https://github.com/microsoft/WSL/issues/5393</li><li>安装WSL2内核https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi</li><li><a href=https://blog.csdn.net/huiruwei1020/article/details/107551106 target=_blank rel="noopener noreffer">https://blog.csdn.net/huiruwei1020/article/details/107551106</a></li></ul></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2020-01-01</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/%E8%BD%AF%E4%BB%B6/>软件</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x08%E6%8A%A4%E7%9C%BC%E8%BD%AF%E4%BB%B6/ class=prev rel=prev title="护眼软件 F.lux和FadeTop"><i class="fas fa-angle-left fa-fw"></i>护眼软件 F.lux和FadeTop</a>
+<a href=/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-0x09%E5%A4%9A%E8%A7%86%E7%AA%97screen/ class=next rel=next title="多视窗 Screen">多视窗 Screen<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/about/ target=_blank rel="noopener noreferrer">Yangliuly1</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div><div class=footer-line></div><div class=footer-line></div></div><script>"serviceWorker"in navigator&&(navigator.serviceWorker.register("/sw.min.js",{scope:"/"}).then(function(){}),navigator.serviceWorker.ready.then(function(){}))</script></footer></div><div id=fixed-buttons><a href=#back-to-top id=back-to-top-button class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw"></i></a></div><div class=assets><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/tablesort/tablesort.min.js></script><script type=text/javascript src=/lib/topbar/topbar.min.js></script><script type=text/javascript src=/lib/pjax/pjax.min.js></script><script type=text/javascript src=/js/theme.min.js defer></script></div><div class=pjax-assets><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:10},comment:{},data:{"desktop-header-typeit":"日落跌进迢迢星野,人间忽晚,山河已秋!","mobile-header-typeit":"日落跌进迢迢星野,人间忽晚,山河已秋!"},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},table:{sort:!0},typeit:{cursorChar:"|",cursorSpeed:1e3,data:{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},duration:-1,speed:100}}</script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/typeit/typeit.min.js></script><script type=text/javascript src=/lib/katex/katex.min.js defer></script><script type=text/javascript src=/lib/katex/auto-render.min.js defer></script><script type=text/javascript src=/lib/katex/copy-tex.min.js defer></script><script type=text/javascript src=/lib/katex/mhchem.min.js defer></script><script type=text/javascript src=/js/katex.min.js defer></script><link rel=stylesheet href=/lib/katex/katex.min.css><link rel=preload as=style onload='this.onload=null,this.rel="stylesheet"' href=/lib/katex/copy-tex.min.css><noscript><link rel=stylesheet href=/lib/katex/copy-tex.min.css></noscript></div></body></html>
