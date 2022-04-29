@@ -120,7 +120,6 @@ class ResNeXtBottleneck(nn.Module):
 略。
 
 ## 参考文献
-
-- [01]-[大师兄-ResNeXt详解-知乎](https://zhuanlan.zhihu.com/p/51075096)
+[^01]: [大师兄-ResNeXt详解-知乎](https://zhuanlan.zhihu.com/p/51075096)
 
 

@@ -162,8 +162,9 @@ Reducing overfitting，使用了预激活的网络的训练误差稍高，但却
 
 ## 训练与测试
 
-## 参考
+略。
 
-- [1]-[黑暗星球-ResNet v2论文笔记-CSDN](https://blog.csdn.net/u014061630/article/details/80558661)
+## 参考文献
 
+[^01]: [黑暗星球-ResNet v2论文笔记-CSDN](https://blog.csdn.net/u014061630/article/details/80558661)
 

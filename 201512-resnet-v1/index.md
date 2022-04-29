@@ -3,7 +3,7 @@
 摘要：残差学习的目的是让模型的内部结构至少有恒等映射的能力，以保证在堆叠网络的过程中，网络至少不会因为继续堆叠而产生退化!
 <!--more-->
 
-# Deep Residual Learning for Image RecognitionCODE
+# Deep Residual Learning for Image Recognition
 
 ## 文献信息
 | 信息 | 内容                                                         |
@@ -34,10 +34,10 @@
 ><strong style="color:red;">优化：</strong>
 >
 >1. 为什么残差学习相对容易小？从梯度入手来$y' = 1 + F'(x)$。
->2. 不同理解：（1）即使BN过后梯度的模稳定在了正常范围内，但**梯度的相关性实际上是随着层数增加持续衰减的**。而经过证明，ResNet可以有效减少这种相关性的衰减；（2）跳连接相加可以实现不同分辨率特征的组合；（DenseNet，跳接组合concat更多分辨率的特征，模型的效果会更好？）（3）引入跳接实际上让模型自身**有了更加“灵活”的结构**，即在训练过程本身，模型可以选择在每一个部分是“更多进行卷积与非线性变换”还是“更多倾向于什么都不做”，抑或是将两者结合。[link](https://www.zhihu.com/question/64494691/answer/786270699)。
+>2. 不同理解：（1）即使BN过后梯度的模稳定在了正常范围内，但**梯度的相关性实际上是随着层数增加持续衰减的**。而经过证明，ResNet可以有效减少这种相关性的衰减；（2）跳连接相加可以实现不同分辨率特征的组合；（DenseNet，跳接组合concat更多分辨率的特征，模型的效果会更好？）（3）引入跳接实际上让模型自身**有了更加“灵活”的结构**，即在训练过程本身，模型可以选择在每一个部分是“更多进行卷积与非线性变换”还是“更多倾向于什么都不做”，抑或是将两者结合，[link](https://www.zhihu.com/question/64494691/answer/786270699)。
 >3. 问题1：既然非常深的模型有这样那样的劣势，那么为什么不直接减少层数？给我的感觉ResNet更多的是为了保证更深的模型不会变得更糟。或者说，减到多少层是一个比添加Residual block更糟心更费时的过程？（模型越深越能拟合复杂的表达，浅层网络达不到要求）
 >4. 问题2：加了shortcut以后，back propagation的时候如何更新参数？求导结果上加了一个常数。
->5. 问题3：已有的神经网络很难拟合潜在的恒等映射函数H(x) = x？有激活函数，会卡掉一部分输入的值。
+>5. 问题3：已有的神经网络很难拟合潜在的恒等映射函数$H(x)=x$？有激活函数，会卡掉一部分输入的值。
 >6. 问题4：恒等映射了，那就是后面的层理想状态下输入输出没有改变，那还要这些层干嘛呢？恒等是加在那些层的输出上的，输出是卷积和恒等映射的共同结果？
 >7. 问题5：有没有可能训练结束后发现有一个Residual Block作用相当于恒等映射，而之后的层并不是，这样的话是不是就能把这个block去掉了？
 >8. 问题6：普通残差block至少包含两层卷积，一层卷积呢？“先求和再激活”还是“先激活再求和”，前者无意义，后者有意义。如果一层卷积，先求和再激活就没有意义，后者就是有意义的。
@@ -95,7 +95,6 @@ ResNet改变目标函数，目标值y和x的差值，即所谓的残差$F(x) := 
 </div>
 
 ## 参考文献
-
-- [1]-[会哭泣的猫-ResNet网络详细解析-CSDN](https://blog.csdn.net/qq_41760767/article/details/97917419?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param)
-- [2]-[小小将-你必须要知道CNN模型：ResNet-知乎](https://zhuanlan.zhihu.com/p/31852747)
+[^01]: [会哭泣的猫-ResNet网络详细解析-CSDN](https://blog.csdn.net/qq_41760767/article/details/97917419?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param)
+[^02]: [小小将-你必须要知道CNN模型：ResNet-知乎](https://zhuanlan.zhihu.com/p/31852747)
 
