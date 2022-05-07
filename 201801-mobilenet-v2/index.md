@@ -3,7 +3,7 @@
 摘要：MobileNet v2网络是由google团队在2018年提出的，相比MobileNet V1网络，准确率更高，模型更小，创新点是 Inverted Residuals（倒残差结构）和Linear Bottlenecks（结构的最后一层采用线性层）。
 <!--more-->
 
-# MobileNetV2: Inverted Residuals and Linear Bottlenecks
+# MobileNetV2: Inverted Residuals and Linear Bottlenecks[^01]
 
 ## 文献信息
 | 信息 | 内容                                                         |
@@ -132,7 +132,6 @@ ReLU6 就是普通的 ReLU 但是限制最大输出为6，这是为了在移动�
 
 
 ## 参考文献
-
 [^01]: [黄鑫元-详解MobileNetV2-知乎](https://zhuanlan.zhihu.com/p/98874284)
 
 

@@ -4,7 +4,7 @@
 <!--more-->
 
 
-# MobileNets: Efficient Convolutional Neural Networks for MobileVision Applications
+# MobileNets: Efficient Convolutional Neural Networks for MobileVision Applications[^01]
 
 ## 文献信息
 | 信息 | 内容                                                         |
@@ -17,15 +17,18 @@
 | 代码 | [Code]()                                                     |
 
 ## 个人理解
-><strong style="color:red;">问题:</strong> 文章为了解决什么问题；
+><strong style="color:red;">问题:</strong> 从计算量角度考虑模型优化；
 > 
-><strong style="color:red;">方法:</strong> 文章提出了什么方法和技术；
+><strong style="color:red;">方法:</strong> 深度可分离卷积+宽度和分辨率超参；
 > 
-><strong style="color:red;">结论:</strong> 文章结论即 数据集 + 评价 指标；
+><strong style="color:red;">结论:</strong> 在资源和精度权衡方面进行了大量实验，与其他流行的ImageNet分类模型相比，我们表现出了强大的性能。然后，展示了MobileNet在广泛的应用和用例中的有效性，包括目标检测、细粒度分类、人脸属性和大规模地理定位；
 > 
-><strong style="color:red;">理解:</strong> 论文读完的感受与体会，比如该方法借鉴了什么思想，方法是不是新颖，实验怎么做的，讨论的变量是什么，还有其他值得读的文献。
+><strong style="color:red;">理解:</strong> 
+>1. 深度可分离卷积；
+>2. 点卷积；
+>3. 宽度和分辨率超参；
 > 
-><strong style="color:red;">优化：</strong>还有什么值得改进与优化的。
+><strong style="color:red;">优化：</strong>无。
 ---
 
 ## 背景知识
@@ -44,13 +47,12 @@
 - 单位通常为 M，通常参数用 float32 表示，所以模型大小是参数数量的 4 倍左右
 - 参数数量与模型大小转换示例：$10M  \ \  float32 \ \  bit = 10M \times 4 Byte = 40MB$
 
-理论计算量（FLOPs）：指模型推断时需要多少计算次数
+理论计算量（FLOPs）：指模型推断时需要多少计算次数。
 - 是 floating point operations 的缩写（注意 s 小写），可以用来衡量算法/模型的复杂度，这关系到算法速度，大模型的单位通常为 G（GFLOPs：10亿次浮点运算），小模型单位通常为 M。
 - 通常只考虑乘加操作(Multi-Adds)的数量，而且只考虑 CONV 和 FC 等参数层的计算量，忽略 BN 和 PReLU 等等。一般情况，CONV 和 FC 层也会 忽略仅纯加操作 的计算量，如 bias 偏置加和 shotcut 残差加等，目前有 BN 的卷积层可以不加 bias。
 - PS：也有用 MAC（Memory Access Cost） 表示的。
 
 #### 硬件性能的衡量
-
 - 算力： 计算平台倾尽全力每秒钟所能完成的浮点运算数（计算速度），单位一般为 TFLOPS（floating point of per second）。
 - 带宽： 计算平台倾尽全力每秒所能完成的内存（CPU 内存 or GPU 显存）交换量，单位一般为 GB/s（GByte/second），计算公式一般为 内存频率 × 内存位宽 / 8。
 
@@ -95,8 +97,7 @@ $$
 \#params=k^2 c_{in} + c_{in}c_{out}  \\
 \#MultiAdd=k^2 c_{in} \times h_{out} w_{out} + 1 \times 1 \times c_{in}c_{out} \times h_{out} w_{out}
 $$
-相比于标准卷积，理论上的加速比例可达
-
+相比于标准卷积，理论上的加速比例可达：
 $$
 \frac{k^2 c_{in} \times h_{out} w_{out} + 1 \times 1 \times c_{in}c_{out} \times h_{out} w_{out}}{k^2 c_{in} c_{out} \times h_{out} w_{out}} = \frac{1}{c_{out}} + \frac{1}{k^2}
 $$
@@ -126,7 +127,6 @@ CONV/s2（步进2的卷积）代替 MaxPool+CONV：使得参数数量不变，�
     - $rho \in (0, 1]$降低输入图像的分辨率，一般输入图片的分辨率是224, 192, 160 or 128。
 
 计算量：
-
 $$
 \#MultiAdd=k^2 \times \alpha c_{in} \times \alpha c_{out} \times \rho h_{out} \times \rho w_{out} \\ + 1 \times 1 \times \alpha c_{in} \times \alpha c_{out} \times \rho h_{out} \times \rho w_{out}
 $$
@@ -148,7 +148,6 @@ $$
     <img src=https://cloud-resources-data.oss-cn-chengdu.aliyuncs.com/blog/image-20220429203838884.png width=75% />
 </div>
 ## 参考文献
-
 [^01]: [kai.han-轻量级CNN之MobileNet系列-知乎](https://zhuanlan.zhihu.com/p/45209964)
 
 

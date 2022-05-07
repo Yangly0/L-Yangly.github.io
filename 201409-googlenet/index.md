@@ -3,7 +3,7 @@
 摘要：针对网络越来越大的问题，GooLeNet提出了将全连接的结构变为稀疏的全连接结构。然而，运算设备在处理不均匀的稀疏数据时运算效率很低。GoogLeNet将稀疏矩阵聚合成稠密矩阵，构建Inception结构解决稀疏运算效率问题。
 <!--more-->
 
-# Going deeper with convolutions
+# Going deeper with convolutions[^01]
 
 ## 文献信息
 | 信息 | 内容                                                         |
@@ -41,10 +41,9 @@
 略。
 ## 原理方法
 
-### 1、原理
 Inception网络的核心思想是找到卷积视觉网络可以近似的最优局部稀疏结构，并且该结构可以利用现有的密度矩阵计算硬件实现。
 
-### 2、Inception 结构
+### 1、Inception 结构
 
 <div align=center>
     <img src=https://cloud-resources-data.oss-cn-chengdu.aliyuncs.com/blog/image-20220427095558750.png width=75% />
@@ -63,7 +62,7 @@ Inception网络的核心思想是找到卷积视觉网络可以近似的最优�
 2. 5x5卷积核计算量大，1x1卷积核先降低维度再卷积，减少计算瓶颈。
 3. 增加网络层数，加入非线性，提高网络的表达能力。因为一层可能会有多个卷积核，在同一个位置但在不同通道的卷积核输出结果相关性极高。一个1×1的卷积核可以很自然的把这些相关性很高，在同一个空间位置，但不同通道的特征结合起来。而其它尺寸的卷积核（3×3，5×5）可以保证特征的多样性。
 
-### 1、GoogLeNet 网络
+### 2、GoogLeNet 网络
 
 <div align=center>
     <img src=https://cloud-resources-data.oss-cn-chengdu.aliyuncs.com/blog/image-20220427095703843.png width=75% />

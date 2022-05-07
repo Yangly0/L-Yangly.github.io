@@ -3,7 +3,7 @@
 摘要：残差学习的目的是让模型的内部结构至少有恒等映射的能力，以保证在堆叠网络的过程中，网络至少不会因为继续堆叠而产生退化!
 <!--more-->
 
-# Deep Residual Learning for Image Recognition
+# Deep Residual Learning for Image Recognition[^01][^02]
 
 ## 文献信息
 | 信息 | 内容                                                         |

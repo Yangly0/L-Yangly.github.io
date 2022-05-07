@@ -3,7 +3,7 @@
 摘要：DenseNet脱离了加深网络层数(ResNet)和加宽网络结构(Inception)来提升网络性能的定式思维，从特征的角度考虑，通过特征重用和旁路(Bypass)设置,既大幅度减少了网络的参数量，又在一定程度上缓解了gradient vanishing问题的产生。结合信息流和特征复用的假设，DenseNet当之无愧成为2017年计算机视觉顶会的年度最佳论文。
 <!--more-->
 
-# Densely Connected Convolutional Networks
+# Densely Connected Convolutional Networks[^01]
 
 ## 文献信息
 | 信息 | 内容                                                         |

@@ -3,7 +3,7 @@
 摘要：VGG 小卷积替换大卷积，减少网络参数，提高网络深度。
 <!--more-->
 
-# Very Deep Convolutional Networks for Large-Scale Image Recognition
+# Very Deep Convolutional Networks for Large-Scale Image Recognition[^01]
 
 ## 文献信息
 

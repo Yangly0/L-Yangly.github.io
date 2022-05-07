@@ -3,7 +3,7 @@
 摘要：基于Inception v3是假设出发，即解耦通道相关性和空间相关性，进行简化，推导出深度可分离卷积，构建Inception v4网络。
 <!--more-->
 
-# Xception: Deep Learning with Depthwise Separable Convolutions
+# Xception: Deep Learning with Depthwise Separable Convolutions[^01][^02]
 
 ## 文献信息
 | 信息               | 内容                                                                                                           |

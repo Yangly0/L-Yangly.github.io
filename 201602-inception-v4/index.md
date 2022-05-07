@@ -3,7 +3,7 @@
 摘要：Incetpion网络趋于深度化，提高网络容量的同时还能保证计算复杂性不至于过高，而ResNet网络解决了在网络深度化时准确率下降的问题，所以很自然地就想到将这两者结合起来，组成Inception-ResNet。
 <!--more-->
 
-# Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
+# Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning[^01]
 
 ## 文献信息
 | 信息               | 内容                                                                                                           |

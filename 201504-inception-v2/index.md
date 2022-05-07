@@ -3,7 +3,7 @@
 摘要：BN归一化，加速收敛，防止梯度消失。
 <!--more-->
 
-# Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
+# Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift[^01]
 
 ## 文献信息
 | 信息 | 内容                                                         |
@@ -75,6 +75,11 @@ BN的主要作用就是：
 > - 在推理时：bn看作1x1卷积，$\alpha$是卷积权值，$\beta$是偏差，把bn和前一个卷积融合为新的卷积，减少计算量并加速。
 >
 > BN参数量：1x1卷积的参数；
+> BN与Dropout冲突：
+>
+> 1. BN和dropout搭配使用时，模型的性能不升反降，因此后续缺省Dropout。但Wide ResNet（WRN）的作者多了一个“心眼”，他发现在很宽的WRN网络里面，在每一个bottleneck的两个conv层之间加上那么一个Dropout，竟然能得到稳定的提升。
+> 1. 原因是方差偏移，第一，训练时采用dropout，虽然通过除以(1-p)的方式来使得训练和测试时，每个神经元输入的期望大致相同，但是他们的方差却不一样。第二，BN是采用训练时得到的均值和方差对数据进行归一化的，现在dropout层的方差都不一样，后续变化也不一样。
+> 1. 解决方案：针对方差偏移，[Understanding the Disharmony between Dropout and Batch Normalization by Variance Shift](https://arxiv.org/abs/1801.05134)给出了两种解决方案，（1）拒绝方差偏移，只在所有BN层的后面采用dropout层，现在大部分开源的模型，都在网络的中间加了BN，你也就只能在softmax的前一层加加dropout。还有另外一种方法是模型训练完后，固定参数，以测试模式对训练数据求BN的均值和方差，再对测试数据进行归一化，论文证明这种方法优于baseline；（2）dropout原文提出了一种高斯dropout，论文再进一步对高斯dropout进行扩展，提出了一个均匀分布Dropout，这样做带来了一个好处就是这个形式的Dropout（又称为“Uout”）对方差的偏移的敏感度降低了，总得来说就是整体方差偏地没有那么厉害了。可以看得出来实验性能整体上比第一个方案好，这个方法显得更加稳定。
 
 ### 2、Inception v2结构
 
@@ -91,6 +96,6 @@ V1到V2的改动：
 
 ## 参考文献
 
-[^01]: [作者-文章名-来源](URL)
+[^01]: [李翔-大白话《Understanding the Disharmony between Dropout and Batch Normalization by Variance Shift》-知乎](https://zhuanlan.zhihu.com/p/33101420)
 
 

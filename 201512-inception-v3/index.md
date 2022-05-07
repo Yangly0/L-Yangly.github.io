@@ -3,7 +3,7 @@
 摘要：针对计算效率方面的作用，提出了分解卷积等思想。	
 <!--more-->
 
-# Rethinking the Inception Architecture for Computer
+# Rethinking the Inception Architecture for Computer[^01][^02]
 
 ## 文献信息
 | 信息 | 内容                                                         |

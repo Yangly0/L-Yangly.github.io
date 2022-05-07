@@ -5,7 +5,7 @@
 
 
 
-# Identity Mappings in Deep Residual Networks
+# Identity Mappings in Deep Residual Networks[^01]
 
 ## 文献信息
 | 信息 | 内容                                                         |
