@@ -55,8 +55,6 @@
 
 ![image-20220506130839211](C:/Users/ly/AppData/Roaming/Typora/typora-user-images/image-20220506130839211.png)
 
-
-
 2. 在MobileNetV2中，在全局平均池化层之前，是一个1×1卷积，将通道数从320扩展到1280，因此就能得到更高维度的特征，供分类器层使用。 这样做的好处是，在预测时有更多更丰富的特征来满足预测，但是同时也**引入了额外的计算成本与延时**。所以，需要改进的地方就是要**保留高维特征的前提下减小延时**。
 
    在MobileNetV3中，这个1 x 1卷积层位于全局平均池化层的后面，因此它可用于更小的特征图，因此速度更快。如图所示， 这样使我们就能够删除前面的bottleneck层和depthwise convolution层，而不会降低准确性。
@@ -69,7 +67,7 @@
 
 谷歌发现新的[swish](https://arxiv.org/abs/1710.05941)激活函数比relu和sigmoid显著提高了精度，但是由于sigmoid在移动设备中很难计算，所以选择用分段线性近似来拟合sigmoid，
 $$
-sigmod =\frac{ReLU6(x+3)}{6}
+sigmod = \frac{ReLU6(x+3)}{6}
 $$
 
 
