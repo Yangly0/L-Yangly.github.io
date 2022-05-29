@@ -47,13 +47,14 @@
 
 残差单元公式:
 $$
-	y_l=h(x_l)+F(x_l,W_l)  \\
-	x_{l+1} = f(y_l)
+y_l=h(x_l)+F(x_l,W_l)
 $$
-其中，$x_l$是第l个残差单元的输入特征，$W=\{W_{l,k|1≤k≤K}\}$是一个与第 l个残差单元相关的权重和偏差的集合，K是残差单元内部的层的数量（K分别为2和3，即普通残差块和瓶颈残差块）。 $F$是残差函数，函数$f$是元素加和后的激活操作（ResNet-v1中采用的是ReLU），函数$h$是恒等映射$h(x_l)=x_l$。
+$$
+								x_{l+1} = f(y_l)
+$$
+其中，$x_l$是第l个残差单元的输入特征，$W=\{W_{l,k|1≤k≤K}\}$是一个与第 l个残差单元相关的权重和偏差的集合，$K$是残差单元内部的层的数量（$K$分别为2和3，即普通残差块和瓶颈残差块）。 $F$是残差函数，函数$f$是元素加和后的激活操作（ResNet-v1中采用的是ReLU）。
 
-如果$f$是一个恒等映射:$x_{l+1}\equiv x_{l}$，得：
-
+**默认$h(x_l)=x_l$，**假设$f$为**恒等映射**，$x_{l+1}\equiv x_{l}$，得：
 $$
 x_{l+1}=x_{l}+\mathcal{F}(x_{l},\mathcal{W}_{l}) \text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }
 $$
@@ -82,9 +83,9 @@ $$
 
 验证公式$h$是一个恒等连接的重要性，假设$h(x_{l})=\lambda_{l} x_{l}$，$λ_l$ 是可调节的变量，假设 $f$是恒等映射，得：
 $$
-{x}_{L} =  (\prod_{i=l}^{L-1}\lambda_{i}){x}_{l} + \sum_{i=l}^{L-1} (\prod_{j=i+1}^{L-1}\lambda_{\tiny j}) \mathcal{F}({x}_{i}, \mathcal{W}_{i}) \\
+{x}_{L} =  (\prod_{i=l}^{L-1}\lambda_{i}){x}_{l} + \sum_{i=l}^{L-1} (\prod_{j=i+1}^{L-1}\lambda_{\tiny j}) \mathcal{F}({x}_{i}, \mathcal{W}_{i})  \\ 
 
-{x}_{L} = (\prod_{i=l}^{L-1}\lambda_{i}){x}_{l} + \sum_{i=l}^{L-1}\mathcal{\hat{F}}({x}_{i}, \mathcal{W}_{i}) \text{ }
+{x}_{L} = (\prod_{i=l}^{L-1}\lambda_{i}){x}_{l} + \sum_{i=l}^{L-1}\mathcal{\hat{F}}({x}_{i}, \mathcal{W}_{i})
 $$
 
 $$
