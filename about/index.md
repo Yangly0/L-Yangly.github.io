@@ -1,23 +1,15 @@
 # 关于
 
-一个跨专业计算机视觉90后少年…
+An inter-professional computer vision post-90s teenager.
 
 <!--more-->
 
-# 个人简介
+# Personal Profile
 
-> 姓名：Yangliuly1
->
-> 学校：中国石油大学（华东）
->
-> 邮箱：yangliuly1993@gmail.com
->
-> 爱好：编程和游戏
->
-> 行业：语音处理、计算机视觉、工业视觉
->
-
-2022-0422：2019年大学毕业，来到一家国企研究算法，从声纹识别到异音检测、视觉测量检测到视觉外观缺陷检测，语音到图像，计算机视觉到工业视觉，转眼三年过去，走过许多路，却已经忘记自己的初心，未来的路在何方？近期已申请离职，希望去沿海闯荡下，学一些技术。**往以后，静下心搞技术，研究算法！！！**
+> Name: Yangliuly1
+>School: China University of Petroleum (East China)
+> Email: yangliuly1993@gmail.com
+>Industry: Computer Vision
 
 
 
