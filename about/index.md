@@ -1,19 +1,22 @@
 # 关于
 
-An inter-professional computer vision post-90s teenager.
+一个跨专业计算机视觉90后少年…
 
 <!--more-->
 
-# Personal Profile
+# 个人简介
 
-> Name: Yangliuly1
+> 姓名：Yangliuly1
 >
-> School: China University of Petroleum (East China)
+> 学校：中国石油大学（华东）
 >
-> Email: yangliuly1993@gmail.com
+> 邮箱：yangliuly1993@gmail.com
 >
-> Industry: Computer Vision
+> 爱好：coding.
+>
 
 
+
+不管未来怎么样，路在脚下，相信自己！
 
 
