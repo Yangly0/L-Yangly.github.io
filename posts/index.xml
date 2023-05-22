@@ -1,13 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Yangliuly1</title><link>https://yangliuly1.github.io/posts/</link><description>所有文章 | Yangliuly1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yangliuly@gmail.com (Yangliuly1)</managingEditor><webMaster>yangliuly@gmail.com (Yangliuly1)</webMaster><lastBuildDate>Sat, 17 Dec 2022 23:16:08 +0800</lastBuildDate><atom:link href="https://yangliuly1.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>First_post</title><link>https://yangliuly1.github.io/first_post/</link><pubDate>Sat, 17 Dec 2022 23:16:08 +0800</pubDate><author>作者</author><guid>https://yangliuly1.github.io/first_post/</guid><description><![CDATA[<p>内容</p>
-<h2 id="0x01-小标题1">0x01 小标题1</h2>
-<p>xx</p>
-<h3 id="1-问题1">(1) 问题1</h3>
-<p>xx</p>
-<h3 id="2-问题2">(2) 问题2</h3>
-<h2 id="0x02-小标题2">0x02 小标题2</h2>]]></description></item><item><title>First_post</title><link>https://yangliuly1.github.io/first_post/</link><pubDate>Sat, 17 Dec 2022 23:16:08 +0800</pubDate><author>作者</author><guid>https://yangliuly1.github.io/first_post/</guid><description><![CDATA[<p>内容</p>
-<h2 id="0x01-小标题1">0x01 小标题1</h2>
-<p>xx</p>
-<h3 id="1-问题1">(1) 问题1</h3>
-<p>xx</p>
-<h3 id="2-问题2">(2) 问题2</h3>
-<h2 id="0x02-小标题2">0x02 小标题2</h2>]]></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - L-Yangly</title><link>https://L-Yangly.github.io/posts/</link><description>所有文章 | L-Yangly</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 23 May 2023 00:30:50 +0800</lastBuildDate><atom:link href="https://L-Yangly.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>First_post</title><link>https://L-Yangly.github.io/posts/first_post/</link><pubDate>Tue, 23 May 2023 00:30:50 +0800</pubDate><author>作者</author><guid>https://L-Yangly.github.io/posts/first_post/</guid><description></description></item></channel></rss>
