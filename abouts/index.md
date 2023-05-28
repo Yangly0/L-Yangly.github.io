@@ -91,6 +91,6 @@ int main(int argc, char const *argv[]){
 
 ---
 
-> 作者: [L-Yangly](https://L-Yangly.github.io/)  
+> 作者: [L-Yangly](https://github.com/L-Yangly)  
 > URL: https://L-Yangly.github.io/abouts/  
 
